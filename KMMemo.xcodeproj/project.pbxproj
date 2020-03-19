@@ -3,24 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8F0237982423BA5300C3A12A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0237972423BA5300C3A12A /* AppDelegate.swift */; };
 		8F02379A2423BA5300C3A12A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0237992423BA5300C3A12A /* SceneDelegate.swift */; };
-		8F02379C2423BA5300C3A12A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F02379B2423BA5300C3A12A /* ViewController.swift */; };
 		8F02379F2423BA5400C3A12A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F02379D2423BA5400C3A12A /* Main.storyboard */; };
 		8F0237A22423BA5400C3A12A /* KMMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F0237A02423BA5400C3A12A /* KMMemo.xcdatamodeld */; };
 		8F0237A42423BA5500C3A12A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F0237A32423BA5500C3A12A /* Assets.xcassets */; };
 		8F0237A72423BA5500C3A12A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F0237A52423BA5500C3A12A /* LaunchScreen.storyboard */; };
+		DDD465686FE7BD331539FF7F /* Pods_KMMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BDF3417EAB3757B4FA8288 /* Pods_KMMemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		591BEA06DA8B07F286900A5D /* Pods-KMMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMMemo.debug.xcconfig"; path = "Target Support Files/Pods-KMMemo/Pods-KMMemo.debug.xcconfig"; sourceTree = "<group>"; };
+		6057660C137F234E655A02A5 /* Pods-KMMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMMemo.release.xcconfig"; path = "Target Support Files/Pods-KMMemo/Pods-KMMemo.release.xcconfig"; sourceTree = "<group>"; };
+		81BDF3417EAB3757B4FA8288 /* Pods_KMMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0237942423BA5300C3A12A /* KMMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0237972423BA5300C3A12A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F0237992423BA5300C3A12A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8F02379B2423BA5300C3A12A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8F02379E2423BA5400C3A12A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F0237A12423BA5400C3A12A /* KMMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KMMemo.xcdatamodel; sourceTree = "<group>"; };
 		8F0237A32423BA5500C3A12A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD465686FE7BD331539FF7F /* Pods_KMMemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E9AAADA83D1CA6DB9F2DE93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81BDF3417EAB3757B4FA8288 /* Pods_KMMemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42F9063751C74C19BB3B8877 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				591BEA06DA8B07F286900A5D /* Pods-KMMemo.debug.xcconfig */,
+				6057660C137F234E655A02A5 /* Pods-KMMemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8F02378B2423BA5300C3A12A = {
 			isa = PBXGroup;
 			children = (
 				8F0237962423BA5300C3A12A /* KMMemo */,
 				8F0237952423BA5300C3A12A /* Products */,
+				42F9063751C74C19BB3B8877 /* Pods */,
+				2E9AAADA83D1CA6DB9F2DE93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +80,55 @@
 		8F0237962423BA5300C3A12A /* KMMemo */ = {
 			isa = PBXGroup;
 			children = (
+				8F0237B22423C0D300C3A12A /* Scene */,
+				8F0237B12423C0C000C3A12A /* Service */,
+				8F0237B02423C0B300C3A12A /* ViewController */,
+				8F0237AF2423C0A500C3A12A /* ViewModel */,
+				8F0237AE2423C09A00C3A12A /* Model */,
 				8F0237972423BA5300C3A12A /* AppDelegate.swift */,
 				8F0237992423BA5300C3A12A /* SceneDelegate.swift */,
-				8F02379B2423BA5300C3A12A /* ViewController.swift */,
-				8F02379D2423BA5400C3A12A /* Main.storyboard */,
 				8F0237A32423BA5500C3A12A /* Assets.xcassets */,
-				8F0237A52423BA5500C3A12A /* LaunchScreen.storyboard */,
 				8F0237A82423BA5500C3A12A /* Info.plist */,
 				8F0237A02423BA5400C3A12A /* KMMemo.xcdatamodeld */,
 			);
 			path = KMMemo;
+			sourceTree = "<group>";
+		};
+		8F0237AE2423C09A00C3A12A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F0237AF2423C0A500C3A12A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8F0237B02423C0B300C3A12A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8F02379D2423BA5400C3A12A /* Main.storyboard */,
+				8F0237A52423BA5500C3A12A /* LaunchScreen.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8F0237B12423C0C000C3A12A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8F0237B22423C0D300C3A12A /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F0237AB2423BA5500C3A12A /* Build configuration list for PBXNativeTarget "KMMemo" */;
 			buildPhases = (
+				E6A8B02582726600D42EB044 /* [CP] Check Pods Manifest.lock */,
 				8F0237902423BA5300C3A12A /* Sources */,
 				8F0237912423BA5300C3A12A /* Frameworks */,
 				8F0237922423BA5300C3A12A /* Resources */,
+				3E61F4E7A9B18262838EF5CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,12 +199,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E61F4E7A9B18262838EF5CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KMMemo/Pods-KMMemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KMMemo/Pods-KMMemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KMMemo/Pods-KMMemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6A8B02582726600D42EB044 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KMMemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8F0237902423BA5300C3A12A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F02379C2423BA5300C3A12A /* ViewController.swift in Sources */,
 				8F0237A22423BA5400C3A12A /* KMMemo.xcdatamodeld in Sources */,
 				8F0237982423BA5300C3A12A /* AppDelegate.swift in Sources */,
 				8F02379A2423BA5300C3A12A /* SceneDelegate.swift in Sources */,
@@ -220,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -286,15 +390,25 @@
 		};
 		8F0237AC2423BA5500C3A12A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 591BEA06DA8B07F286900A5D /* Pods-KMMemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N6Z88ML25;
-				INFOPLIST_FILE = KMMemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Action\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Differentiator\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/NSObject+Rx\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxCoreData\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxDataSources\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxRelay\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxSwift\"",
+					"$(inherited)",
 				);
+				INFOPLIST_FILE = KMMemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinhan.KMMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -304,15 +418,24 @@
 		};
 		8F0237AD2423BA5500C3A12A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6057660C137F234E655A02A5 /* Pods-KMMemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N6Z88ML25;
-				INFOPLIST_FILE = KMMemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Action\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Differentiator\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/NSObject+Rx\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxCoreData\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxDataSources\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxRelay\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxSwift\"",
 				);
+				INFOPLIST_FILE = KMMemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinhan.KMMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
